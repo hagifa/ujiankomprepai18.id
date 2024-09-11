@@ -1,0 +1,167 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General styling for the navbar */
+.navbar {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Sticks the navbar to the top of the viewport */
+    z-index: 1000; /* Ensures the navbar appears above other content */
+    width: 100%; /* Makes sure the navbar takes up the full width */
+}
+
+/* Styling for the nav list */
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Aligns nav items in a row */
+}
+
+/* Styling for each nav item */
+.nav-item {
+    position: relative; /* Necessary for positioning the dropdown */
+}
+
+/* Styling for links in nav items */
+.nav-item a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Hover effect for nav item links */
+.nav-item a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none; /* Hides the dropdown by default */
+    position: absolute; /* Positions the dropdown relative to the parent nav-item */
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 100%; /* Positions the dropdown just below the parent item */
+    left: 0;
+    width: 200px; /* Sets a fixed width for the dropdown menu */
+}
+
+/* Shows the dropdown menu on hover of the nav item */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Styling for dropdown menu items */
+.dropdown-menu li {
+    border-top: 1px solid #444; /* Adds separation between items */
+}
+
+/* Styling for links in the dropdown menu */
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px; /* Adjust padding inside dropdown items */
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect for dropdown menu items */
+.dropdown-menu li a:hover {
+    background-color: #575757;
+}
+
+img {
+    height: 322px;
+    width: 695px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .navbar {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    main {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    footer {
+        font-size: 0.875rem;
+    }
+}
